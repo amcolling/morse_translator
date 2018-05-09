@@ -1,4 +1,4 @@
-require 'pry'
+
 class Translator
 
   def initialize
@@ -41,7 +41,7 @@ class Translator
                     " " => " ",
                     'cap' => '.....0',
                   }
-                  @translated_string = ""
+
 
 
 
@@ -70,6 +70,14 @@ class Translator
 
   def translate_input_from_file(code)
     @dictionary["i"].upcase + " " + @dictionary["a"] + @dictionary["m"] + " " + @dictionary["i"] + @dictionary["n"] +  " " + @dictionary["a"] + " " + @dictionary["f"] + @dictionary["i"] + @dictionary["l"] + @dictionary["e"]
+
+  end
+
+  def translate_morse_to_english
+    @dictionary.map do |hash|
+    keys = ["h", "e", "l", "l", "o", " " " ", "w", "o", "r", "l", "d"]
+    keys.zip.to_s
+    end
   end
 
 

@@ -33,13 +33,9 @@ class TranslatorTest < Minitest::Test
     assert_equal ".. .--- ..-. .- ..-....-...", translator.translate_input_from_file("I am in a file")
   end
 
-#   $ translator = Translate.new
-# => #<Translate:0x007fa1ab98cac0>
-# $ translator.morse_to_eng(".... . .-.. .-.. ---  .-- --- .-. .-.. -..")
-# => "hello world"
-
-
-
-
-
+  def test_translate_morse_to_english
+    translator = Translator.new
+    translator.eng_to_morse(".... . .-.. .-.. ---  .-- --- .-. .-.. -..")
+    assert_equal "hello world", translator.translate_morse_to_english
+  end
 end
