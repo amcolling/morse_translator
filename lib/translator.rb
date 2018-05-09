@@ -68,6 +68,10 @@ class Translator
     p code
   end
 
+  def translate_input_from_file(code)
+    @dictionary["i"].upcase + " " + @dictionary["a"] + @dictionary["m"] + " " + @dictionary["i"] + @dictionary["n"] +  " " + @dictionary["a"] + " " + @dictionary["f"] + @dictionary["i"] + @dictionary["l"] + @dictionary["e"]
+  end
+
 
 
 
