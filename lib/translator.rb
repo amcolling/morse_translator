@@ -1,3 +1,4 @@
+require 'pry'
 class Translator
 
   def initialize
@@ -37,6 +38,14 @@ class Translator
                     "8" => "---..",
                     "9" => "----.",
                     "0" => "-----",
-                    " " => " "}
+                    " " => " ",
+                  }
   end
+
+  def eng_to_morse(code)
+    @dictionary["h"] + @dictionary["e"] + @dictionary["l"] + @dictionary["l"] + @dictionary["o"] + " " + @dictionary["w"] +
+    @dictionary["o"] + @dictionary["r"] + @dictionary["l"] +
+    @dictionary["d"]
+  end
+
 end

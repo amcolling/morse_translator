@@ -8,13 +8,18 @@ class TranslatorTest < Minitest::Test
   translator = Translator.new
   assert_instance_of Translator, translator
   end
-end 
+
+  def test_eng_to_morse
+    translator = Translator.new
+    translator.eng_to_morse("hello world")
+    assert_equal "......-...-..--- .-----.-..-..-..", translator.eng_to_morse("hello world")
+  end
+end
 
 
 # Translate English to Morse Code
 #
 # lowercase letters
-#   $ translator = Translate.new
-#   => #<Translate:0x007fa1ab98cac0>
+
 #   $ translator.eng_to_morse("hello world")
 #   => "......-...-..--- .-----.-..-..-.."
