@@ -31,8 +31,3 @@ class TranslatorTest < Minitest::Test
 
 
 end
-
-
-
-#   $ translator.eng_to_morse("There are 3 ships")
-#   => "-......-.. .-.-.. ...-- ..........--...."
