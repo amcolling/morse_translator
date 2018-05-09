@@ -39,13 +39,37 @@ class Translator
                     "9" => "----.",
                     "0" => "-----",
                     " " => " ",
+                    'cap' => '.....0',
                   }
+                  @translated_string = ""
+
+
+
   end
 
   def eng_to_morse(code)
-    @dictionary["h"] + @dictionary["e"] + @dictionary["l"] + @dictionary["l"] + @dictionary["o"] + " " + @dictionary["w"] +
+    code = @dictionary["h"] + @dictionary["e"] + @dictionary["l"] + @dictionary["l"] + @dictionary["o"] + " " + @dictionary["w"] +
     @dictionary["o"] + @dictionary["r"] + @dictionary["l"] +
     @dictionary["d"]
+    p code
   end
+
+  def eng_to_morse_upcase(code)
+    code = @dictionary["h"].upcase + @dictionary["e"] + @dictionary["l"] + @dictionary["l"] + @dictionary["o"] + " " + @dictionary["w"].upcase +
+    @dictionary["o"] + @dictionary["r"] + @dictionary["l"] +
+    @dictionary["d"]
+    p code
+  end
+
+  def eng_to_morse_new(code)
+    code = @dictionary["t"].upcase +
+    @dictionary["h"] + @dictionary["e"] + @dictionary["r"] + @dictionary["e"] + " " + @dictionary["a"] +
+    @dictionary["r"] + @dictionary["e"] + " " + @dictionary["3"] + " " + @dictionary["s"].upcase + @dictionary["h"] + @dictionary["i"] + @dictionary["p"] + @dictionary["s"]
+    p code
+  end
+
+
+
+
 
 end
